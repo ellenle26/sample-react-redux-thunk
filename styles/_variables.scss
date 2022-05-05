@@ -1,0 +1,108 @@
+$main-color: #0B305F;
+$text-color: #252733;
+$error: #FF0000;
+$sub-color: #FFAE27;
+$sub-color-opacity: rgba(255, 174, 39, 0.08);
+$text-color-sidebar: #A4A6B3;
+$text-color-sidebar-selected: #DDE2FF;
+$green-tag: rgba(104, 191, 132, 0.2);
+$yellow-tag: #FEF3C7;
+$blue-tag: rgba(77, 137, 201, 0.2);
+$gray-tag: #F4F4F4;
+
+@mixin page_heading {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.3px;
+    color: #252733;
+}
+
+@mixin dialog_title {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+}
+
+@mixin hor_justify_center_align_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hor_justify_end_align_center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin ver_justify_center_align_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin ver_justify_between_align_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin ver_justify_start_align_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.custom_input {
+    width: 100%;
+    margin-top: 24px;
+    
+    > .label {
+        color: #9FA2B4;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+        margin-bottom: 6px;
+    }
+
+    > input {
+        width: 100%;
+        height: 42px;
+        border: 1px solid #F0F1F7;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 0 8px;
+
+        &::placeholder {
+            color: #9FA2B4;
+        }
+
+        &:focus {
+            border: solid 1px $main-color;
+            outline: none;
+        }
+
+        &:hover {
+            border: solid 1px $main-color;
+            outline: none;
+        }
+    }
+    
+    .input_error {
+        border-color: #EC2020;
+    }
+}
+
+.dialog_button {
+    width: 160px;
+    height: 48px;
+    border: 1px solid #313131;
+    box-sizing: border-box;
+    border-radius: 8px;
+}

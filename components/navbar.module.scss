@@ -1,0 +1,105 @@
+@import "styles/variables";
+
+.navbar_container {
+    width: 100%;
+    min-height: 100%; 
+    background-color: $main-color;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar_menu_item_logo {
+    width: 100%;
+    height: 128px;
+    display: flex;
+    align-items: center;
+
+    > div:nth-child(1) {
+        img {
+            width: 32px;
+            height: 32px;
+            margin: 0 12px 0 32px;
+        }
+    } 
+    > div:nth-child(2) {
+        font-size: 19px;
+        line-height: 22px;
+        color: #fff;
+    }   
+}
+
+.navbar_menu_item {
+    width: 100%;
+    
+    > div {
+        width: 100%;
+        height: 56px;
+        padding-left: 48px;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: $text-color-sidebar;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            padding-left: 45px;
+            background-color: $sub-color-opacity;
+            color: $text-color-sidebar-selected;
+            border-left: solid 3px $sub-color;
+            cursor: pointer;
+        }
+    }
+
+    .selected {
+        padding-left: 45px;
+        background-color: $sub-color-opacity;
+        color: $text-color-sidebar-selected;
+        border-left: solid 3px $sub-color;
+
+        &:hover {
+            cursor: unset;
+        }
+    }
+}
+
+.user {
+    width: 100%;
+    padding: 40px 20px;
+
+    > div {
+        width: 100%;
+        height: 56px;
+        padding: 5px 20px;
+        background: rgba(159, 162, 180, 0.08);
+        border-radius: 10px;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.user_ava {
+    width: 45px;
+    height: 45px;
+    border: solid 1px #fff;
+    border-radius: 50px;
+    padding: 1px;
+    @include hor_justify_center_align_center;
+
+    > img {
+        max-width: 100%;
+        border-radius: 50px;
+        object-fit: contain;
+    }
+}

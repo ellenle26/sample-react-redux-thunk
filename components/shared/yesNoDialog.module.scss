@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+    color: $text-color;
+    margin: 40px;
+}
+
+.actions {
+    margin: 0 32px 30px;
+    min-width: 400px;
+    @include hor_justify_end_align_center;
+
+    > .dialog_button {
+        width: 160px;
+        height: 48px;
+        margin-left: 15px;
+    }
+}

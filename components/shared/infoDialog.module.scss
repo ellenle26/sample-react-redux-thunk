@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.title {
+    padding: 32px;
+    border-bottom: 1px solid #DFE0EB;
+    @include dialog_title;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > .close_icon:hover {
+        cursor: pointer;
+    }
+}
+
+.info {
+    width: 100%;
+    padding: 44px 40px;
+}
+
+.info_grid,
+.other_grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 50% auto;
+    column-gap: 60px;
+    row-gap: 21px;
+}
+
+.other_grid {
+    margin-top: 21px;
+}
+
+.info_title {
+    font-weight: bold;
+    color: #9FA2B4;
+    font-weight: bold;
+    font-size: 14px;
+}

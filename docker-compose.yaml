@@ -1,0 +1,14 @@
+version: '3'
+services:
+  react-redux-thunk:
+    container_name: react-redux-thunk
+    build: .
+    environment:
+      TZ: 'Asia/Tokyo'
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    tty: true
+    working_dir: /srv
+    command: npm run dev

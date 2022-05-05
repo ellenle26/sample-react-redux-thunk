@@ -1,0 +1,69 @@
+@import "styles/variables";
+
+
+.input_container,
+.input_container_group,
+.input_container_group_area {
+    width: 100%;
+
+    .input_label {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.2px;
+        margin-bottom: 6px;
+
+        > div > span {
+            margin-left: 5px;
+            color: $error;
+        }
+    }
+
+    .label_height {
+        height: 48px;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 48px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #c4c4c4;
+        border-radius: 8px;
+        resize: vertical;
+
+        &:hover {
+            outline: none;
+            border: 1px solid #000;
+            border-radius: 8px;
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid #000;
+            border-radius: 8px;
+        }
+    }
+}
+
+.err_mess {
+    color: $error;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.input_container_group,
+.input_container_group_area {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    > .input_label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+.input_container_group_area {
+    display: grid;
+    grid-template-columns: 14% 86%;
+}

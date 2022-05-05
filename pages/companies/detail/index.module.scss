@@ -1,0 +1,204 @@
+@import "styles/variables";
+
+.page_container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0 40px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+}
+
+.page_title {
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    @include page_heading;
+
+    > span {
+        margin-right: 12px;
+    }
+
+    > .icon {
+        margin-right: 12px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.company_info,
+.call_info,
+.job_info {
+    padding-top: 28px;
+}
+
+.job_info {
+    margin-bottom: 36px;
+}
+
+.expand_icon {
+    width: 12px;
+    height: 12px;
+    border-bottom: solid 2px #666666;
+    border-right: solid 2px #666666;
+    transform: rotate(45deg);
+}
+
+.company_info_title,
+.call_info_title,
+.job_info_title {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+
+    display: flex;
+    align-items: center;
+}
+
+.info_grid {
+    width: 100%;
+    padding: 44px 40px;
+    border-top: 1.5px solid #DFE0EB;
+
+    display: grid;
+    grid-template-columns: 10% calc(35% - 120px) 10% calc(35% - 120px) 10%;
+    column-gap: 60px;
+    row-gap: 20px;
+}
+
+.info_title {
+    font-weight: bold;
+    color: #9FA2B4;
+}
+
+.edit_icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    > img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.add_icon {
+    margin-left: 28px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.call_info_table {
+    width: 100%;
+    border-top: 1.5px solid #DFE0EB;
+
+    > .head_row {
+        color: #9FA2B4;
+        font-weight: bold;
+        padding: 45px 0 10px;
+
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+
+        > div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    > .item_row {
+        border-top: 1.5px solid #DFE0EB;
+        min-height: 92px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+            word-break: break-word;
+        }
+
+        .actions {
+            justify-content: space-around;
+
+            > img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.job_info_table {
+    width: 100%;
+    border-top: 1.5px solid #DFE0EB;
+
+    > .head_row {
+        color: #9FA2B4;
+        font-weight: bold;
+        padding: 45px 0 10px;
+
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+
+        > div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    > .item_row {
+        border-top: 1.5px solid #DFE0EB;
+        min-height: 92px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+            word-break: break-word;
+        }
+
+        .actions {
+            justify-content: space-around;
+
+            > img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.onhover:hover {
+    cursor: pointer;
+    background-color: $sub-color-opacity;
+}
+
+.bottom_row {
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px 0;
+    padding: 0 55px;
+}
+
+.no_data {
+    height: 54px;
+    display: flex;
+    color: #9FA2B4;
+    font-weight: bold;
+    @include hor_justify_center_align_center;
+}

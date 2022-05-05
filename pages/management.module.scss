@@ -1,0 +1,114 @@
+@import "styles/variables";
+
+.page_container {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    padding: 0 40px;
+    overflow: auto;
+}
+
+.page_title {
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    @include page_heading;
+
+    > span {
+        margin-right: 12px;
+    }
+
+    > .icon {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.table_grid {
+    margin: 6px 0 36px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #DFE0EB;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 100%;
+
+    > .head_row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        > div {
+            min-height: 48px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.2px;
+            color: #9FA2B4;
+            text-align: center;
+            @include hor_justify_center_align_center;
+        }
+    }
+
+    > .table_row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        border-top: 1px solid #DFE0EB;
+        min-height: 92px;
+
+        > div {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            padding: 5px;
+            @include hor_justify_center_align_center;
+            
+            > .delete_bttn {
+                cursor: pointer;
+            }
+
+            > span::after {
+                content: ",";
+            }
+
+            > span:nth-last-child(1)::after {
+                content: "";
+            }
+
+            .tag_gray,
+            .tag_yellow {
+                padding: 5px 12px;
+                border-radius: 50px;
+            }
+            .tag_gray {
+                background-color: $gray-tag;
+            }
+            .tag_yellow {
+                background-color: $yellow-tag;
+            }
+        }
+
+        .actions {
+            justify-content: space-around;
+
+            > img:hover {
+                cursor: pointer;
+            }
+        }
+
+        .view_icon {
+            color: #C5C7CD;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    > .bottom_row {
+        display: flex;
+        justify-content: flex-end;
+        padding: 32px 55px;
+        border-top: 1px solid #DFE0EB;
+    }
+}

@@ -1,0 +1,52 @@
+@import "styles/variables";
+
+.title {
+    padding: 32px;
+    border-bottom: 1px solid #DFE0EB;
+    @include dialog_title;
+}
+
+.dialog_info {
+    width: 100%;
+    padding: 50px 100px 40px;
+    border-bottom: 1px solid #DFE0EB;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    row-gap: 10px;
+}
+
+.dialog_info_call {
+    width: 100%;
+    padding: 50px 100px 40px;
+    border-bottom: 1px solid #DFE0EB;
+
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 10px;
+
+    > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 70px;
+    }
+
+    .memo {
+        grid-template-columns: 100%;
+    }
+}
+
+.actions {
+    height: 110px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 53px;
+
+    > .dialog_button {
+        width: 160px;
+        height: 48px;
+        margin-left: 15px;
+    }
+}
